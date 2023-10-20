@@ -3,7 +3,6 @@ let msg ="";
 const row = document.querySelector('.row')
 let gridString= "";
 
-
 for (let i = 1; i <= 100 ; i++){
     if ((i % 3) === 0 && (i % 5) === 0){
         msg = "FizzBuzz"
@@ -14,7 +13,8 @@ for (let i = 1; i <= 100 ; i++){
     } else {
         msg = i
     }
-    gridString += `<div class="square">${msg}</div> `
+    console.log(msg);
+    gridString += `<div class="square ${msg}">${msg}</div> `
 }
 
 row.innerHTML = gridString;
